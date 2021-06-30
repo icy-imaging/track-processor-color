@@ -14,7 +14,7 @@ Icy is developed and maintained by [Biological Image Analysis unit at Institut P
 ## Plugin description
 
 <!-- Short description of goals of package, with descriptive links to the documentation website --> 
-
+Track Processor to color tracks in the Track Manager
         
 A more detailed user documentation can be found on the Color Track Processor documentation page on the Icy website: http://icy.bioimageanalysis.org/plugin/track-processor-color/               
 
