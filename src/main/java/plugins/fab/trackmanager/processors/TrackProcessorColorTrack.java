@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010-2023. Institut Pasteur.
+ * Copyright (c) 2010-2024. Institut Pasteur.
  *
  * This file is part of Icy.
  * Icy is free software: you can redistribute it and/or modify
@@ -18,8 +18,10 @@
 
 package plugins.fab.trackmanager.processors;
 
-import icy.gui.util.ComponentUtil;
-import icy.gui.util.GuiUtil;
+import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginIcon;
+import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginName;
+import org.bioimageanalysis.icy.gui.GuiUtil;
+import org.bioimageanalysis.icy.gui.component.ComponentUtil;
 import plugins.fab.trackmanager.PluginTrackManagerProcessor;
 import plugins.fab.trackmanager.TrackGroup;
 import plugins.fab.trackmanager.TrackSegment;
@@ -34,6 +36,8 @@ import java.util.ArrayList;
 /**
  * @author Fabrice de Chaumont
  */
+@IcyPluginName("Color Track Processor")
+@IcyPluginIcon(path = "/color-track-processor.png")
 public class TrackProcessorColorTrack extends PluginTrackManagerProcessor implements ActionListener {
     Color defaultColor = Color.blue;
 
@@ -58,7 +62,6 @@ public class TrackProcessorColorTrack extends PluginTrackManagerProcessor implem
 
 
     public TrackProcessorColorTrack() {
-
         setName("Color Track Processor");
         defaultColorButton.setPreferredSize(new Dimension(100, 20));
         panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
@@ -109,7 +112,6 @@ public class TrackProcessorColorTrack extends PluginTrackManagerProcessor implem
 
     @Override
     public void Compute() {
-
         if (isEnabled()) {
             if (buttonRandomColor.isSelected())
                 randomColors();
@@ -126,11 +128,9 @@ public class TrackProcessorColorTrack extends PluginTrackManagerProcessor implem
             if (buttonColorGroup.isSelected())
                 colorsDependsOnGroup();
         }
-
     }
 
     private void colorsDependsOnGroup() {
-
         final float factor = 0.8f / trackPool.getTrackGroupList().size();
 
         for (final TrackGroup group : trackPool.getTrackGroupList()) {
@@ -141,14 +141,12 @@ public class TrackProcessorColorTrack extends PluginTrackManagerProcessor implem
                 }
             }
         }
-
     }
 
     boolean randomColorComputed = false;
     ArrayList<Color> colorList = new ArrayList<>();
 
     private void randomColors() {
-
         final ArrayList<TrackSegment> trackSegmentList = trackPool.getTrackSegmentList();
 
         if (colorList.size() != trackSegmentList.size())
@@ -161,14 +159,12 @@ public class TrackProcessorColorTrack extends PluginTrackManagerProcessor implem
             for (final Detection d : ts.getDetectionList())
                 d.setColor(colorList.get(i));
         }
-
     }
 
     private void defaultColor() {
         for (final Detection detection : trackPool.getAllDetection()) {
             detection.setColor(defaultColor);
         }
-
     }
 
     private void createRandomColors() {
@@ -185,7 +181,6 @@ public class TrackProcessorColorTrack extends PluginTrackManagerProcessor implem
                 color = Color.orange;
             d.setColor(color);
         }
-
     }
 
     private void colorsDependsOnTrackNumber() {
