@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010-2024. Institut Pasteur.
+ * Copyright (c) 2010-2026. Institut Pasteur.
  *
  * This file is part of Icy.
  * Icy is free software: you can redistribute it and/or modify
@@ -18,7 +18,6 @@
 
 package plugins.fab.trackmanager.processors;
 
-import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginIcon;
 import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginName;
 import org.bioimageanalysis.icy.gui.GuiUtil;
 import org.bioimageanalysis.icy.gui.component.ComponentUtil;
@@ -37,7 +36,6 @@ import java.util.ArrayList;
  * @author Fabrice de Chaumont
  */
 @IcyPluginName("Color Track Processor")
-@IcyPluginIcon(path = "/color-track-processor.png")
 public class TrackProcessorColorTrack extends PluginTrackManagerProcessor implements ActionListener {
     Color defaultColor = Color.blue;
 
