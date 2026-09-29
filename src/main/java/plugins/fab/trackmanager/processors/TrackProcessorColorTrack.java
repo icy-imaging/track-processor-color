@@ -18,9 +18,9 @@
 
 package plugins.fab.trackmanager.processors;
 
-import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginName;
-import org.bioimageanalysis.icy.gui.GuiUtil;
-import org.bioimageanalysis.icy.gui.component.ComponentUtil;
+import fr.icy.extension.plugin.annotation_.IcyPluginName;
+import fr.icy.gui.GuiUtil;
+import fr.icy.gui.component.ComponentUtil;
 import plugins.fab.trackmanager.PluginTrackManagerProcessor;
 import plugins.fab.trackmanager.TrackGroup;
 import plugins.fab.trackmanager.TrackSegment;

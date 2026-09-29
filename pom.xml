@@ -5,31 +5,32 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.bioimageanalysis.icy</groupId>
+        <groupId>fr.icy</groupId>
         <artifactId>pom-icy</artifactId>
-        <version>3.0.0-a.5</version>
+        <version>3.0.0-a.8-SNAPSHOT</version>
     </parent>
 
-    <artifactId>color-track-processor</artifactId>
-    <version>2.0.0-a.5</version>
+    <groupId>fr.icy.extension</groupId>
+    <artifactId>track-processor-color</artifactId>
+    <version>2.0.0-a.8-SNAPSHOT</version>
 
-    <name>Color Track Processor</name>
+    <name>Track Processor - Color</name>
     <description>Track Processor to color tracks in the Track Manager</description>
-    <url>https://icy.bioimageanalysis.org/</url>
+    <url>http://icy.fr/</url>
     <inceptionYear>2011</inceptionYear>
 
     <scm>
-        <url>https://gitlab.pasteur.fr/bia/icy/extensions/color-track-processor</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/extensions/track-processor-color</url>
         <tag>v${project.version}</tag>
     </scm>
 
     <issueManagement>
         <system>GitLab Issues</system>
-        <url>https://gitlab.pasteur.fr/bia/icy/extensions/color-track-processor/-/issues</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/extensions/track-processor-color/-/issues</url>
     </issueManagement>
     <ciManagement>
         <system>GitLab CI</system>
-        <url>https://gitlab.pasteur.fr/bia/icy/extensions/color-track-processor/-/pipelines</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/extensions/track-processor-color/-/pipelines</url>
     </ciManagement>
 
     <organization>
@@ -58,12 +59,13 @@
     <contributors>
         <contributor>
             <name>Fabrice de Chaumont</name>
-            <roles>
-                <role>founder</role>
-            </roles>
         </contributor>
         <contributor>
             <name>Stéphane Dallongeville</name>
+        </contributor>
+        <contributor>
+            <name>Thomas Musset</name>
+            <properties><id>Azargas</id></properties>
         </contributor>
     </contributors>
 
@@ -81,12 +83,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.bioimageanalysis.icy</groupId>
+            <groupId>fr.icy.extension</groupId>
             <artifactId>spot-detection-utilities</artifactId>
+            <version>${fr.icy.extension.spot-detection-utilities.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.bioimageanalysis.icy</groupId>
+            <groupId>fr.icy.extension</groupId>
             <artifactId>track-manager</artifactId>
+            <version>${fr.icy.extension.track-manager.version}</version>
         </dependency>
     </dependencies>
 </project>
